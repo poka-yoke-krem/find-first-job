@@ -1,15 +1,17 @@
-import logo from '../assets/images/logo.svg';
-import main from '../assets/images/main.svg';
-import Wrapper from '../assets/wrappers/LandingPage';
+import { Link } from "react-router-dom";
+import main from "../assets/images/main.svg";
+import Wrapper from "../assets/wrappers/LandingPage";
+
+import { Logo } from "../components";
 
 const Landing = () => {
   return (
     <Wrapper>
       <nav>
-        <img src={logo} alt='logo' className='logo' />
+        <Logo />
       </nav>
-      <div className='container page'>
-        <div className='info'>
+      <div className="container page">
+        <div className="info">
           <h1>
             Job <span>Traking</span> app
           </h1>
@@ -19,9 +21,11 @@ const Landing = () => {
             fit pok pok gluten-free DIY. Next level palo santo vaporware
             schlitz, venmo vice YOLO vinyl snackwave crucifix readymade paleo.
           </p>
-          <button className='btn btn-hero'>Login/Register</button>
+          <Link to="/register" className="btn btn-hero">
+            Login/Register
+          </Link>
         </div>
-        <img src={main} alt='' className='img main-img' />
+        <img src={main} alt="" className="img main-img" />
       </div>
     </Wrapper>
   );
